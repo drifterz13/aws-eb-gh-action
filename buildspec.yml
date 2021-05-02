@@ -13,10 +13,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - yarn clean && yarn build && yarn dist
+      - yarn build
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - 'deploy_artifacts.zip'
+    - '**/*'
