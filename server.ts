@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan("short"));
 
 app.get('/', (req, res) => {
-  res.send('Hello there! 🥩🍔')
+  res.send('Hello there! 🥩🍔🍟')
 })
 
 app.post("/skill", async (req, res) => {
