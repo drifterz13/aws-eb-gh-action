@@ -4,8 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev server.ts"
+    "dev": "ts-node-dev server.ts",
+    "clean": "rm -rf dist deploy_artifacts.zip",
+    "dist": "sh scripts/dist.sh",
+    "release": "yarn clean && yarn build && yarn dist && eb deploy --message='release'"
   },
   "dependencies": {
     "express": "^4.17.1",
